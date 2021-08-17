@@ -12,6 +12,8 @@
 # rotate 3 steps to the right: [5,6,7,1,2,3,4]
 
 def shift_step(num,k):
+  k = k % len(num)
+  print(k)
   for i in range(0,k):
     last = num[-1]
     for i in range(0,len(num)-1):
