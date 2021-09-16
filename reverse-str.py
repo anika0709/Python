@@ -14,6 +14,16 @@ str = "anika"
 
 reverse_str(str)
 
+## OR
+
+new_str1 = []
+
+for i in range(length-1,-1,-1):
+  new_str1.append(string[i])
+
+  str1 = "".join(new_str1)
+
+print(str1)
 #######
 Another
 

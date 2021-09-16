@@ -19,8 +19,8 @@ read_nlines("read.txt",4)
 def append_text(f):
   #from itertools import islice
   with open(f, "a+") as fo:
-    fo.write("another line\n")
-    fo.write("last line\n")
+    fo.write("another linesss\n")
+    fo.write("last linesss\n")
   #txt = open(f)
     print(fo.name,"-",fo.mode) 
     print ("Name of the file: ", fo.name)
@@ -44,3 +44,5 @@ append_text("read.txt")
 with open('read.txt', 'r') as f:
   last_line = f.readlines()[-1]
   print("".join(last_line))
+
+

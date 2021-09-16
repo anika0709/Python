@@ -8,7 +8,7 @@ orders = {
 	'cortado': 41
 }
 
-print(orders.items())
+#print(orders.items())
 
 sorted_order = sorted(orders.items())
 print(sorted_order) # sorted on the key
@@ -40,7 +40,7 @@ sorted_dict = {}
 for i in sorted_values:
     for k in dict1.keys(): 
         if dict1[k] == i:
-          print(dict1[k])
+          #print(dict1[k])
           sorted_dict[k] = dict1[k]
           break
 
@@ -49,9 +49,14 @@ print(sorted_dict)
 ####
 dict1 = {1: 1, 2: 9, 3: 4, 4: 1} # can handle multiple same values
 sorted_keys = sorted(dict1, key=dict1.get) 
+print(dict1.get)
 print(sorted_keys)
 new_dict = {}
 for k in sorted_keys:
   print (k)
   new_dict[k] = dict1[k]
 print(new_dict)
+
+#Getting key with maximum value in dictionary?
+stats = {'a':1000, 'b':3000, 'c': 100}
+print (max(stats, key= lambda k: stats[k] ))
