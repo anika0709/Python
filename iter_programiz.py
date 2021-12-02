@@ -31,3 +31,7 @@ class Even:
 		else:
 			raise StopIteration
 
+
+e = Even(20)
+print(e.__next__(10))
+

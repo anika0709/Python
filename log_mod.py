@@ -5,3 +5,4 @@ logging.basicConfig(    #logging.basicConfig we are configuring the root logger
     format="[%(levelname)s]:%(lineno)s - %(message)s",
     level=logging.DEBUG
 )
+logging.warning("This is a warning")

@@ -113,6 +113,9 @@ pattern = re.compile(r'M(r|s|rs)[.]?\s\w+')
 matches = pattern.findall(text_to_search) # only print out matched groups, if no gruop, all matches
 print (matches)
 
+matchObj = re.match(pattern,text_to_search)
+if matchObj:
+	print(matchObj.group())
 for match in matches:
 	print (match)
 

@@ -10,5 +10,5 @@ print(sys.version)
 print(sys.copyright)
 print(sys.executable)
 print(sys.builtin_module_names)   # 
-print(sys.modules)  # o/p as dictionary
+#print(sys.modules)  # o/p as dictionary
 print('time' in sys.modules)

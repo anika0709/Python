@@ -96,3 +96,15 @@ def text_match(text):
     return "Not MAtched :("
 print(text_match("abc"))
 print(text_match("abbb"))
+
+sentence = '''%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?'''
+
+import re, collections
+def clean_text(sentence):
+
+  op = re.sub('[^a-z|A-Z|\s|\.]+',"", sentence).split()
+  print(collections.Counter(op).most_common(3))
+
+print(clean_text(sentence))
+
+

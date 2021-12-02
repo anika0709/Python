@@ -38,3 +38,16 @@ with open('filename.txt') as f:
     for line in f:
         pass
     last_line = line
+
+
+from subprocess import Popen, PIPE
+f = 'read.txt'
+# Get the last line from the file
+p = Popen(['tail','-1',f],shell=False, stderr=PIPE, stdout=PIPE)
+res,err = p.communicate()
+if err:
+    print (err.decode())
+else:
+    # Use split to get the part of the line that you require
+    res = res.decode().split('location="')[1].strip().split('"')[0]
+    print (res)

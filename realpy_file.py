@@ -2,12 +2,12 @@
 import fileinput
 import sys
 
-files = fileinput.input()
-for line in files:
-    if fileinput.isfirstline():
-        print(f'\n--- Reading {fileinput.filename()} ---')
-    print(' -> ' + line, end='')
-print()
+# files = fileinput.input()
+# for line in files:
+#     if fileinput.isfirstline():
+#         print(f'\n--- Reading {fileinput.filename()} ---')
+#     print(' -> ' + line, end='')
+# print()
 # dir listing
 
 import os
@@ -32,7 +32,7 @@ with os.scandir(base_dir) as entries:
 		if entry.is_file():
 			print(entry.name)
 		if entry.is_dir():
-			print(entry.name)
+			print("Dir =",entry.name)
 
 # file attributes
 with os.scandir(base_dir) as entries:
@@ -102,7 +102,7 @@ try:
 except OSError as e:
     print(f'Error: {trash_dir} : {e.strerror}')
 
-shutil.copy2(src, dst) #Using .copy2() preserves details about the file such as last access time, permission bits, last modification time, and flags
+#shutil.copy2(src, dst) #Using .copy2() preserves details about the file such as last access time, permission bits, last modification time, and flags
 shutil.copytree('data_1', 'data1_backup')
 shutil.move('dir_1/', 'backup/')
 os.rename('first.zip', 'first_01.zip')

@@ -105,6 +105,12 @@ result = find_longest_word(["PHP", "Exercises", "Backend"])
 print("\nLongest word: ",result[1])
 print("Length of the longest word: ",result[0])
 
+list_words = ["anika", "kumargaurav", "mahikka"]
+
+w_count =[len(i) for i in list_words]
+
+i = w_count.index(max(w_count))
+print(list_words[i])
 
 #####
 # Write a Python program to count the occurrences of each word in a given sentence.
@@ -136,7 +142,9 @@ if count >= 2:
   #########
   #  Write a Python program to create a Caesar encryption. Go to the editor
 
-# Note : In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. The method is named after Julius Caesar, who used it in his private correspondence.
+# Note : In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques. 
+# It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. 
+# The method is named after Julius Caesar, who used it in his private correspondence.
 def crypt(step,data_input):
   new_data = []
   uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
